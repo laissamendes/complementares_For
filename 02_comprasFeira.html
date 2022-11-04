@@ -16,10 +16,17 @@
 
     //ENTRADA
 
+    const Tomate = Number(prompt("Quantos Kg de tomate foram vendidos?")*3.9);
+    const Batata = Number(prompt("Quantos Kg de batata foram vendidos?")*3.4);
+    const Batata_Doce = Number(prompt("Quantos Kg de batata doce foram vendidos?")*4.7);
+    const Alface = Number(prompt("Quantas uni de alface foram vendidas?")*1.5);
+    const Cebola = Number(prompt("Quantos Kg de cebola foram vendidos?")*2.9);
+    const Cebolinha = Number(prompt("Quantas unidade de cebolinha foram vendidas?")*1.4);
+    const Beterraba = Number(prompt("Quantos Kg de beterraba foram vendidos?")*4.1);
 
     //PROCESSAMENTO
 
+    let faturamento = Tomate+Batata+Batata_Doce+Alface+Cebola+Cebolinha+Beterraba;
     
-    //SAÍDA
-    
+    document.write("Seu faturamento foi igual a R$"+faturamento)
 </script>
