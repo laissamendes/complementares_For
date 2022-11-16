@@ -9,10 +9,30 @@
 
     //ENTRADA
 
+let dinheiroInvestido = 100;
+let total24 = 0;
+let total48 = 0;
+let total96 = 0;
 
     //PROCESSAMENTO
 
-    
+    for (let controle = 0; controle <= 96; controle++) {
+        dinheiroInvestido = dinheiroInvestido + (dinheiroInvestido * 0.018);
+        if (controle === 24) {
+            total24 = dinheiroInvestido;
+        }
+        if (controle === 48) {
+            total48 = dinheiroInvestido;
+        }
+        if (controle === 96) {
+            total96 = dinheiroInvestido;
+        }
+    }
+
     //SAÍDA
-    
+
+    document.write("Em 24 meses você terá R$"+total24.toFixed(2)+"</br>");
+    document.write("Em 48 meses você terá R$"+total48.toFixed(2)+"</br>");
+    document.write("Em 96 meses você terá R$"+total96.toFixed(2));
+
 </script>
