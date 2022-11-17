@@ -9,9 +9,16 @@
 
     //ENTRADA
 
-
+    let fibonacci = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+    const quantNum = parseInt(prompt("Diga quantos números deseja adicionar a sequencia de fibonacci:"));
+   
     //PROCESSAMENTO
-
+    
+    
+    for (let contador = 10; contador <= quantNum; contador++) {
+        fibonacci.push(fibonacci[contador - 10] + fibonacci[contador - 1]);
+    }
+    document.write(fibonacci.join(", ")); 
     
     //SAÍDA
     

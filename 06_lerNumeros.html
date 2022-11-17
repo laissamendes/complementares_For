@@ -9,10 +9,29 @@
 
     //ENTRADA
 
+    let listaDeNumeros = [4, 8, 12, 35, 78, 83, 5, 22, 49, 95];
+    let menor50 = [];
+    let maior50 = [];
+    let percentualMenores = 0;
+    let percentualMaiores = 0;
 
     //PROCESSAMENTO
 
-    
+    for (const numero of listaDeNumeros) {
+        if (numero < 50) {
+            menor50.push(numero);
+            percentualMenores = (menor50.length * 100) / listaDeNumeros.length;
+        }
+        if (numero > 50) {
+            maior50.push(numero);
+            percentualMaiores = (maior50.length * 100) / listaDeNumeros.length;
+        }
+
+    }
     //SAÍDA
+
+    document.write("Lista dos menores: "+menor50.join(", ")+"</br> e o seu percentual é: "+percentualMenores+"% </br></br>");
+    document.write("Lista dos maiores: "+maior50.join(", ")+"</br> e o seu percentual é: "+percentualMaiores+"%")
+
     
 </script>

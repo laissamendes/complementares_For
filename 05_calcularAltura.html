@@ -13,11 +13,25 @@
 
     //PROCESSAMENTO
 
-    let menorAltura = 0;
+    let menorAltura = 100;
     let maiorAltura = 0;
+    let alturas = [];
+
+    /*for (let controle = 1; controle <= numPessoas; controle++) {
+        alturas.push(Number(prompt("Altura da pessoa " + controle)));
+    }
+
+    menorAltura = alturas.sort((a,b) => a-b)[0];
+    maiorAltura = alturas.sort((a,b) => b-a)[0];*/
 
     for (let controle = 1; controle <= numPessoas; controle++) {
-        let altura = Number(prompt("Altura da pessoa " + controle));
+        let altura = Number(prompt("Altura da pessoa " + controle).replace(",","."));
+        if (altura > maiorAltura) {
+            maiorAltura = altura;
+        }
+        if (altura < menorAltura) {
+            menorAltura = altura;
+        }
     }
 
     //SAÍDA
