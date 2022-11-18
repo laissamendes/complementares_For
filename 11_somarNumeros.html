@@ -11,16 +11,34 @@
     let pares = [];
 
     //PROCESSAMENTO
+    let soma = 0;
+    let resultadoNaTela1 = "";
+    let resultadoNaTela2 = "";
 
-    for (let controle = 1; controle <= 100; controle++) {
+    for (let numero = 1; numero <= 100; numero++) {
         if (numero % 2 === 0) {
-        pares.push(numero);
-    } else{
-        impares.push(numero);
-    }
-    }
+            pares.push(numero);
 
-    
+        } else {
+            impares.push(numero);
+
+        }
+
+    }
+    for (const numero of pares) {
+        soma = soma + numero;
+       
+    }
+    resultadoNaTela1 = "A soma é " + soma;
+    for (const numero of impares) {
+        soma = soma + numero;
+        
+    }
+    resultadoNaTela2 = "A soma é " + soma;
     //SAÍDA
-    
+
+    document.write("Impares: " + impares.join(", ") + "</br>" + resultadoNaTela2+ "</br>");
+    document.write("Pares: " + pares.join(", ") + "</br>" + resultadoNaTela1);
+
+
 </script>
